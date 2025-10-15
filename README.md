@@ -1,2 +1,2 @@
 # CSC-3730
-LSU CSC 3730 Fall 2025
+LSU CSC 3730 Project Fall 2025
