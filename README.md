@@ -2,7 +2,7 @@ Repository for CSC 3730 Fall 2025
 =
 Project using StarDist on SOMETHING. We used computer vision to count SOMETHING in images.
 
-Made by myself, [Kim Nyugen](https://github.com/tngu589), and [Riley Richard]
+Made by myself, [Kim Nyugen](https://github.com/tngu589), and [Riley Richard](https://github.com/rileythampersand)
 
 [StarDist Python Library](https://stardist.net/)
 
