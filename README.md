@@ -30,18 +30,3 @@ Setup with Anaconda
 
 Once that is finished, you need to activate the new environment. Use the command:
 >`conda activate project`
-
-Setup with Docker
-=
-**First**
-Download the image
->'in progress'
-
-Running the training script
-=
-To run training script, use the following:
->`python training.py --epochs <integer> --dataset_size <integer> --testing_size <integer>`
-
-After training, you can use the model to then predict on a test image.
->`python prediction_test.py`
-
