@@ -20,12 +20,12 @@ The environment we used was created in Anaconda: https://www.anaconda.com/downlo
 
 Setup with Anaconda
 =
-**First**, clone the repository.
+First, clone the repository.
 >`git clone https://github.com/skylarwilson/CSC-3730`
 
-**Second**, open Anaconda and navigate to the folder containing the repository.
+Second, navigate to the folder containing the repository.
 
-**Third**, use the command:
+Third, use the command:
 >`conda env create -f environment.yml`
 
 Once that is finished, you need to activate the new environment. Use the command:
@@ -39,5 +39,5 @@ This can take a few minutes depending on if you have a GPU compatible with CUDA 
 Once the training is done, use the command:
 >`cells predict`
 
-Once that is done, take a look inside predictions for an image that is produced by our model.
-There you can see how well it did as well as a count of how many the model predicted.
+Once that is done, take a look inside predictions for an image that is produced by the model made from `cells train`.
+There you can see how well it did visually as well as a count of how many the model predicted.
