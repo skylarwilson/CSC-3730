@@ -17,7 +17,7 @@ import os
 X_filenames = sorted(glob("train/images/*.*"))
 
 # function to parse arguments given in command line
-def parse_args():
+def parse_args(argv=None):
     """
     Parses command-line arguments for configuring dataset parameters, model training, and evaluation settings.
 
@@ -70,7 +70,7 @@ def parse_args():
         help="Name of the model. Default: 'customModel'."
     )
 
-    return parser.parse_args()
+    return parser.parse_args(argv)
 
 # function to read images using Pillow
 def read_image(filename, grayscale=False):
@@ -80,7 +80,7 @@ def read_image(filename, grayscale=False):
         return np.array(img)
 
 # main function
-def main(args):
+def main(args=None):
     """
     Main function to process image data, set up training configurations, and train a segmentation model.
 
@@ -104,7 +104,9 @@ def main(args):
         - CSV reports with model performance statistics.
         - Trained models saved in the specified directory.
     """
-
+    if args is None:
+        args = parse_args()
+    
     # Y represents the masks
     Y_filenames = sorted(glob("train/masks/*.*"))
 

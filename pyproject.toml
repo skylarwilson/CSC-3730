@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools<81", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cells"
+version = "0.1.0"
+description = "Training and prediction utilities for StarDist-based segmentation"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+authors = [{ name = "Your Name" }]
+dependencies = [
+  "tensorflow==2.10.*",
+  "stardist==0.8.5",
+  "numpy==1.24.*",
+]
+
+[project.scripts]
+cells = "cli:main"
+
+[tool.setuptools]
+py-modules = ["training", "cli", "prediction_test"]
