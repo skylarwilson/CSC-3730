@@ -30,3 +30,14 @@ Setup with Anaconda
 
 Once that is finished, you need to activate the new environment. Use the command:
 >`conda activate cells`
+
+Once activated, run the command:
+>`cells train`
+
+This can take a few minutes depending on if you have a GPU compatible with CUDA or not.
+
+Once the training is done, use the command:
+>`cells predict`
+
+Once that is done, take a look inside predictions for an image that is produced by our model.
+There you can see how well it did as well as a count of how many the model predicted.
