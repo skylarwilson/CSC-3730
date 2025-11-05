@@ -29,4 +29,4 @@ Setup with Anaconda
 >`conda env create -f environment.yml`
 
 Once that is finished, you need to activate the new environment. Use the command:
->`conda activate project`
+>`conda activate cells`
