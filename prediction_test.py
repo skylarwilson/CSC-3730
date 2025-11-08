@@ -33,34 +33,30 @@ def main():
     X = [np.array(Image.open(f)) for f in X]
 
     # load the specific model you created from the directory of your models
-    model = StarDist2D(None, name="customModel_6_epochs_20", basedir="models/datasize_6")
+    model = StarDist2D(None, name="customModel_24_epochs_100", basedir="models/datasize_24")
 
     # function for prediction
     def prediction(model, i, show_dist=True):
 
-        # Normalize per-channel (C not in axis => per-channel percentiles)
-        axis_norm = (0, 1)
-
         # normalize the image for better prediction quality
+        axis_norm = (0,1)
+
         img = normalize(X[i], 1, 99.8, axis=axis_norm)
 
         # uses CPU for prediction - can run into memory problems otherwise
         with tf.device("/cpu:0"):
-            labels, details = model.predict_instances(
-                img,
-                axes="YXC"
-                )
+            labels, details = model.predict_instances(img)
 
         # count the number of unique labels (subtract 1 to exclude the background label 0)
-        # num_objects = len(np.unique(labels)) - 1
-        num_objects = int(labels.max())
+        num_objects = len(np.unique(labels)) - 1
+
         # get the file name for the current image
         file_name = file_names[i]
 
         # get the actual count from the file name
         # for this to work, your files need to be labeled in this way:
-        # ###count.*
-        actual_count = int(file_name.split("count.png")[0])
+        # ###count.jpg
+        actual_count = int(file_name.split("count")[0])
 
         # initialize a plot of specified size
         plt.figure(figsize=(13, 10))
@@ -69,7 +65,7 @@ def main():
         img_show = img if img.ndim == 2 else img[..., 0]
 
         # display the segmented labels over the original image
-        plt.imshow(img)#, cmap="gray")
+        plt.imshow(img_show, cmap="gray")
         plt.imshow(labels, cmap=lbl_cmap, alpha=0.5)
 
         # add the title from the first image

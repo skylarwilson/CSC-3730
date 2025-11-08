@@ -12,9 +12,9 @@ def main():
         train_args = training.parse_args([])   # empty list = no CLI options, just defaults
 
         # override only what you care about
-        train_args.dataset_size = 6
-        train_args.testing_size = 1
-        train_args.epochs = [25]
+        train_args.dataset_size = 24
+        train_args.testing_size = 5
+        train_args.epochs = [100]
 
         training.main(train_args)
 
