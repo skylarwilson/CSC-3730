@@ -12,7 +12,7 @@ Made by myself, [Kim Nyugen](https://github.com/tngu589), and [Riley Richard](ht
 
 IMPORTANT NOTES: 
 
-All of our training was done on a x64 Windows 11 system.
+All of our training was done on a x64 Windows 11 system with a NVIDIA GeForce RTX 3060Ti GPU.
 
 If you would like to replicate our work, the GPU you use must be CUDA compatible to signficantly speed up the training process. Here is a link to see the list: https://developer.nvidia.com/cuda-gpus
 
