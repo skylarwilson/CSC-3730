@@ -1,6 +1,6 @@
 Repository for CSC 3730 Fall 2025
 =
-Project using StarDist on SOMETHING. We used computer vision to count SOMETHING in images.
+Project using StarDist on Blood Cells.
 
 Made by myself, [Kim Nyugen](https://github.com/tngu589), and [Riley Richard](https://github.com/rileythampersand)
 
@@ -14,7 +14,7 @@ IMPORTANT NOTES:
 
 All of our training was done on a x64 Windows 11 system with a NVIDIA GeForce RTX 3060Ti GPU.
 
-If you would like to replicate our work, the GPU you use must be CUDA compatible to signficantly speed up the training process. Here is a link to see the list: https://developer.nvidia.com/cuda-gpus
+If you would like to replicate our work, the GPU you use must be CUDA compatible to signficantly speed up the training process. The code will still work without a GPU, but the process will take substantially longer. Here is a link to see the list: https://developer.nvidia.com/cuda-gpus
 
 The environment we used was created in Anaconda: https://www.anaconda.com/download/success
 

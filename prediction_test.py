@@ -33,7 +33,7 @@ def main():
     X = [np.array(Image.open(f)) for f in X]
 
     # load the specific model you created from the directory of your models
-    model = StarDist2D(None, name="customModel_24_epochs_100", basedir="models/datasize_24")
+    model = StarDist2D(None, name="customModel_24_epochs_50", basedir="models/datasize_24")
 
     # function for prediction
     def prediction(model, i, show_dist=True):
